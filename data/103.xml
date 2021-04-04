@@ -1,7 +1,7 @@
 <annotation>
 	<folder>data</folder>
-	<filename>103.jpg</filename>
-	<path>E:\Projects\Coding\russian-license-plate-recognition\data\103.jpg</path>
+	<filename>105.jpg</filename>
+	<path>E:\Projects\Coding\russian-license-plate-recognition\data\105.jpg</path>
 	<source>
 		<database>Unknown</database>
 	</source>
@@ -17,10 +17,10 @@
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>92</xmin>
-			<ymin>373</ymin>
-			<xmax>440</xmax>
-			<ymax>675</ymax>
+			<xmin>64</xmin>
+			<ymin>366</ymin>
+			<xmax>624</xmax>
+			<ymax>688</ymax>
 		</bndbox>
 	</object>
 	<object>
@@ -29,10 +29,10 @@
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>167</xmin>
-			<ymin>480</ymin>
-			<xmax>295</xmax>
-			<ymax>566</ymax>
+			<xmin>199</xmin>
+			<ymin>529</ymin>
+			<xmax>400</xmax>
+			<ymax>617</ymax>
 		</bndbox>
 	</object>
 </annotation>

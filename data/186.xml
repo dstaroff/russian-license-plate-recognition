@@ -1,26 +1,26 @@
 <annotation>
 	<folder>data</folder>
-	<filename>225.jpg</filename>
-	<path>E:\Projects\Coding\russian-license-plate-recognition\data\225.jpg</path>
+	<filename>195.jpg</filename>
+	<path>E:\Projects\Coding\russian-license-plate-recognition\data\195.jpg</path>
 	<source>
 		<database>Unknown</database>
 	</source>
 	<size>
-		<width>1000</width>
-		<height>667</height>
+		<width>480</width>
+		<height>360</height>
 		<depth>3</depth>
 	</size>
 	<segmented>0</segmented>
 	<object>
 		<name>car_rear</name>
 		<pose>Unspecified</pose>
-		<truncated>0</truncated>
+		<truncated>1</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>270</xmin>
-			<ymin>333</ymin>
-			<xmax>744</xmax>
-			<ymax>542</ymax>
+			<xmin>37</xmin>
+			<ymin>1</ymin>
+			<xmax>375</xmax>
+			<ymax>302</ymax>
 		</bndbox>
 	</object>
 	<object>
@@ -29,10 +29,10 @@
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>424</xmin>
-			<ymin>398</ymin>
-			<xmax>589</xmax>
-			<ymax>435</ymax>
+			<xmin>175</xmin>
+			<ymin>150</ymin>
+			<xmax>293</xmax>
+			<ymax>178</ymax>
 		</bndbox>
 	</object>
 </annotation>

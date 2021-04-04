@@ -1,26 +1,26 @@
 <annotation>
 	<folder>data</folder>
-	<filename>046.jpg</filename>
-	<path>E:\Projects\Coding\russian-license-plate-recognition\data\046.jpg</path>
+	<filename>047.jpg</filename>
+	<path>E:\Projects\Coding\russian-license-plate-recognition\data\047.jpg</path>
 	<source>
 		<database>Unknown</database>
 	</source>
 	<size>
-		<width>960</width>
-		<height>714</height>
+		<width>1500</width>
+		<height>1000</height>
 		<depth>3</depth>
 	</size>
 	<segmented>0</segmented>
 	<object>
-		<name>car_front</name>
+		<name>car_rear</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>340</xmin>
-			<ymin>383</ymin>
-			<xmax>948</xmax>
-			<ymax>639</ymax>
+			<xmin>792</xmin>
+			<ymin>87</ymin>
+			<xmax>1430</xmax>
+			<ymax>608</ymax>
 		</bndbox>
 	</object>
 	<object>
@@ -29,10 +29,34 @@
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>628</xmin>
-			<ymin>541</ymin>
-			<xmax>827</xmax>
-			<ymax>590</ymax>
+			<xmin>1040</xmin>
+			<ymin>350</ymin>
+			<xmax>1235</xmax>
+			<ymax>393</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>car_rear</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1</xmin>
+			<ymin>1</ymin>
+			<xmax>574</xmax>
+			<ymax>997</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>plate</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>141</xmin>
+			<ymin>589</ymin>
+			<xmax>427</xmax>
+			<ymax>813</ymax>
 		</bndbox>
 	</object>
 	<object>
@@ -41,22 +65,10 @@
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>561</xmin>
-			<ymin>67</ymin>
-			<xmax>675</xmax>
-			<ymax>163</ymax>
-		</bndbox>
-	</object>
-	<object>
-		<name>plate</name>
-		<pose>Unspecified</pose>
-		<truncated>0</truncated>
-		<difficult>0</difficult>
-		<bndbox>
-			<xmin>590</xmin>
-			<ymin>115</ymin>
-			<xmax>625</xmax>
-			<ymax>127</ymax>
+			<xmin>323</xmin>
+			<ymin>4</ymin>
+			<xmax>682</xmax>
+			<ymax>640</ymax>
 		</bndbox>
 	</object>
 </annotation>

@@ -1,26 +1,26 @@
 <annotation>
 	<folder>data</folder>
-	<filename>177.jpg</filename>
-	<path>E:\Projects\Coding\russian-license-plate-recognition\data\177.jpg</path>
+	<filename>183.jpg</filename>
+	<path>E:\Projects\Coding\russian-license-plate-recognition\data\183.jpg</path>
 	<source>
 		<database>Unknown</database>
 	</source>
 	<size>
-		<width>533</width>
-		<height>400</height>
+		<width>1600</width>
+		<height>1290</height>
 		<depth>3</depth>
 	</size>
 	<segmented>0</segmented>
 	<object>
-		<name>car_front</name>
+		<name>car_rear</name>
 		<pose>Unspecified</pose>
-		<truncated>1</truncated>
+		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>156</xmin>
-			<ymin>97</ymin>
-			<xmax>533</xmax>
-			<ymax>291</ymax>
+			<xmin>403</xmin>
+			<ymin>740</ymin>
+			<xmax>557</xmax>
+			<ymax>913</ymax>
 		</bndbox>
 	</object>
 	<object>
@@ -29,10 +29,82 @@
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>248</xmin>
-			<ymin>212</ymin>
-			<xmax>449</xmax>
-			<ymax>264</ymax>
+			<xmin>437</xmin>
+			<ymin>817</ymin>
+			<xmax>490</xmax>
+			<ymax>842</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>car_rear</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>464</xmin>
+			<ymin>804</ymin>
+			<xmax>755</xmax>
+			<ymax>1075</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>plate</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>519</xmin>
+			<ymin>991</ymin>
+			<xmax>616</xmax>
+			<ymax>1034</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>car_rear</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1096</xmin>
+			<ymin>836</ymin>
+			<xmax>1300</xmax>
+			<ymax>969</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>plate</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1144</xmin>
+			<ymin>921</ymin>
+			<xmax>1219</xmax>
+			<ymax>948</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>car_rear</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1434</xmin>
+			<ymin>829</ymin>
+			<xmax>1599</xmax>
+			<ymax>930</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>plate</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1475</xmin>
+			<ymin>856</ymin>
+			<xmax>1540</xmax>
+			<ymax>882</ymax>
 		</bndbox>
 	</object>
 </annotation>

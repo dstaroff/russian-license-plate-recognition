@@ -1,50 +1,26 @@
 <annotation>
 	<folder>data</folder>
-	<filename>129.jpg</filename>
-	<path>E:\Projects\Coding\russian-license-plate-recognition\data\129.jpg</path>
+	<filename>131.jpg</filename>
+	<path>E:\Projects\Coding\russian-license-plate-recognition\data\131.jpg</path>
 	<source>
 		<database>Unknown</database>
 	</source>
 	<size>
 		<width>1600</width>
-		<height>1200</height>
+		<height>1068</height>
 		<depth>3</depth>
 	</size>
 	<segmented>0</segmented>
 	<object>
-		<name>car_front</name>
-		<pose>Unspecified</pose>
-		<truncated>0</truncated>
-		<difficult>0</difficult>
-		<bndbox>
-			<xmin>347</xmin>
-			<ymin>601</ymin>
-			<xmax>958</xmax>
-			<ymax>920</ymax>
-		</bndbox>
-	</object>
-	<object>
-		<name>plate</name>
-		<pose>Unspecified</pose>
-		<truncated>0</truncated>
-		<difficult>0</difficult>
-		<bndbox>
-			<xmin>510</xmin>
-			<ymin>780</ymin>
-			<xmax>728</xmax>
-			<ymax>872</ymax>
-		</bndbox>
-	</object>
-	<object>
 		<name>car_rear</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>134</xmin>
-			<ymin>259</ymin>
-			<xmax>411</xmax>
-			<ymax>577</ymax>
+			<xmin>284</xmin>
+			<ymin>292</ymin>
+			<xmax>910</xmax>
+			<ymax>896</ymax>
 		</bndbox>
 	</object>
 	<object>
@@ -53,34 +29,10 @@
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>185</xmin>
-			<ymin>402</ymin>
-			<xmax>284</xmax>
-			<ymax>441</ymax>
-		</bndbox>
-	</object>
-	<object>
-		<name>car_rear</name>
-		<pose>Unspecified</pose>
-		<truncated>0</truncated>
-		<difficult>0</difficult>
-		<bndbox>
-			<xmin>762</xmin>
-			<ymin>199</ymin>
-			<xmax>859</xmax>
-			<ymax>268</ymax>
-		</bndbox>
-	</object>
-	<object>
-		<name>plate</name>
-		<pose>Unspecified</pose>
-		<truncated>0</truncated>
-		<difficult>0</difficult>
-		<bndbox>
-			<xmin>795</xmin>
-			<ymin>217</ymin>
-			<xmax>830</xmax>
-			<ymax>229</ymax>
+			<xmin>455</xmin>
+			<ymin>730</ymin>
+			<xmax>693</xmax>
+			<ymax>811</ymax>
 		</bndbox>
 	</object>
 </annotation>
