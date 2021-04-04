@@ -1,21 +1,12 @@
 <annotation>
-	<folder>data</folder>
 	<filename>087.jpg</filename>
-	<path>E:\Projects\Coding\russian-license-plate-recognition\data\087.jpg</path>
-	<source>
-		<database>Unknown</database>
-	</source>
 	<size>
 		<width>1600</width>
 		<height>1200</height>
 		<depth>3</depth>
 	</size>
-	<segmented>0</segmented>
 	<object>
 		<name>car_rear</name>
-		<pose>Unspecified</pose>
-		<truncated>0</truncated>
-		<difficult>0</difficult>
 		<bndbox>
 			<xmin>540</xmin>
 			<ymin>436</ymin>
@@ -25,9 +16,6 @@
 	</object>
 	<object>
 		<name>plate</name>
-		<pose>Unspecified</pose>
-		<truncated>0</truncated>
-		<difficult>0</difficult>
 		<bndbox>
 			<xmin>711</xmin>
 			<ymin>515</ymin>
@@ -37,9 +25,6 @@
 	</object>
 	<object>
 		<name>car_rear</name>
-		<pose>Unspecified</pose>
-		<truncated>0</truncated>
-		<difficult>0</difficult>
 		<bndbox>
 			<xmin>366</xmin>
 			<ymin>351</ymin>
@@ -49,9 +34,6 @@
 	</object>
 	<object>
 		<name>plate</name>
-		<pose>Unspecified</pose>
-		<truncated>0</truncated>
-		<difficult>0</difficult>
 		<bndbox>
 			<xmin>462</xmin>
 			<ymin>439</ymin>
@@ -61,9 +43,6 @@
 	</object>
 	<object>
 		<name>car_rear</name>
-		<pose>Unspecified</pose>
-		<truncated>0</truncated>
-		<difficult>0</difficult>
 		<bndbox>
 			<xmin>1123</xmin>
 			<ymin>355</ymin>
@@ -73,9 +52,6 @@
 	</object>
 	<object>
 		<name>plate</name>
-		<pose>Unspecified</pose>
-		<truncated>0</truncated>
-		<difficult>0</difficult>
 		<bndbox>
 			<xmin>1192</xmin>
 			<ymin>458</ymin>
@@ -85,9 +61,6 @@
 	</object>
 	<object>
 		<name>car_rear</name>
-		<pose>Unspecified</pose>
-		<truncated>0</truncated>
-		<difficult>0</difficult>
 		<bndbox>
 			<xmin>1363</xmin>
 			<ymin>352</ymin>
@@ -97,9 +70,6 @@
 	</object>
 	<object>
 		<name>plate</name>
-		<pose>Unspecified</pose>
-		<truncated>0</truncated>
-		<difficult>0</difficult>
 		<bndbox>
 			<xmin>1414</xmin>
 			<ymin>399</ymin>
@@ -109,9 +79,6 @@
 	</object>
 	<object>
 		<name>car_rear</name>
-		<pose>Unspecified</pose>
-		<truncated>0</truncated>
-		<difficult>0</difficult>
 		<bndbox>
 			<xmin>615</xmin>
 			<ymin>267</ymin>
@@ -121,9 +88,6 @@
 	</object>
 	<object>
 		<name>plate</name>
-		<pose>Unspecified</pose>
-		<truncated>0</truncated>
-		<difficult>0</difficult>
 		<bndbox>
 			<xmin>641</xmin>
 			<ymin>306</ymin>

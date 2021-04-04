@@ -1,38 +1,44 @@
 <annotation>
-	<folder>data</folder>
-	<filename>193.jpg</filename>
-	<path>E:\Projects\Coding\russian-license-plate-recognition\data\193.jpg</path>
-	<source>
-		<database>Unknown</database>
-	</source>
+	<filename>194.jpg</filename>
 	<size>
-		<width>1080</width>
-		<height>720</height>
+		<width>1920</width>
+		<height>730</height>
 		<depth>3</depth>
 	</size>
-	<segmented>0</segmented>
 	<object>
 		<name>car_front</name>
-		<pose>Unspecified</pose>
-		<truncated>0</truncated>
-		<difficult>0</difficult>
 		<bndbox>
-			<xmin>302</xmin>
-			<ymin>443</ymin>
-			<xmax>760</xmax>
-			<ymax>625</ymax>
+			<xmin>565</xmin>
+			<ymin>370</ymin>
+			<xmax>923</xmax>
+			<ymax>545</ymax>
 		</bndbox>
 	</object>
 	<object>
 		<name>plate</name>
-		<pose>Unspecified</pose>
-		<truncated>0</truncated>
-		<difficult>0</difficult>
 		<bndbox>
-			<xmin>420</xmin>
-			<ymin>539</ymin>
-			<xmax>572</xmax>
-			<ymax>576</ymax>
+			<xmin>744</xmin>
+			<ymin>458</ymin>
+			<xmax>860</xmax>
+			<ymax>487</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>car_rear</name>
+		<bndbox>
+			<xmin>1126</xmin>
+			<ymin>262</ymin>
+			<xmax>1490</xmax>
+			<ymax>561</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>plate</name>
+		<bndbox>
+			<xmin>1290</xmin>
+			<ymin>388</ymin>
+			<xmax>1413</xmax>
+			<ymax>416</ymax>
 		</bndbox>
 	</object>
 </annotation>
