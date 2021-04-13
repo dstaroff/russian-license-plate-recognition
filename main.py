@@ -71,7 +71,7 @@ def process_frame(image):
                     if license_plate in db:
                         color = car.Color.HIGHLIGHTED
 
-                        if db.last_searched_plate != license_plate:
+                        if str(db.last_searched_plate) != str(license_plate):
                             print(db.get_owner(license_plate))
 
                 cv2.rectangle(
