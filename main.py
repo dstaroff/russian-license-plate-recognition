@@ -3,22 +3,35 @@ import numpy as np
 from PIL import ImageGrab
 
 from src.db import LicensePlatesDB, Owner
-from src.pipeline import CarDetector, LicensePlateDetector, LicensePlateRecognizer
-from src.plate import LicensePlate
+from src.pipeline import (
+    CarDetector,
+    LicensePlateDetector,
+    RuLicensePlateRecognizer,
+    KzLicensePlateRecognizer,
+)
+from src.plate import RuLicensePlate, KzLicensePlate
 
 webcam = cv2.VideoCapture(0, cv2.CAP_DSHOW)
 
 car_detector = CarDetector()
-license_plate_recognizer = LicensePlateRecognizer()
+license_plate_recognizer = KzLicensePlateRecognizer()
 
 db = LicensePlatesDB()
 db.add_relation(
     Owner('Иван', 'Иванович', 'Иванов', 'M', '04.04.1984'),
-    LicensePlate(series='MMM', number='700', region='48')
+    RuLicensePlate(series='MMM', number='700', region='48')
 )
 db.add_relation(
     Owner('Евгения', 'Евгеньевна', 'Евгеньева', 'Ж', '08.08.1998'),
-    LicensePlate(series='OOO', number='888', region='19')
+    RuLicensePlate(series='OOO', number='888', region='19')
+)
+db.add_relation(
+    Owner('Жігерқызы Өрзия', '', 'Адырбай', 'М', '05.05.1978'),
+    KzLicensePlate(series='ATA', number='770', region='17')
+)
+db.add_relation(
+    Owner('Қыдырқызы Үрия', '', 'Нысынбай', 'Ж', '06.06.1996'),
+    KzLicensePlate(series='PHL', number='029', region='10')
 )
 
 
@@ -72,7 +85,7 @@ def process_frame(image):
                         color = car.Color.HIGHLIGHTED
 
                         if str(db.last_searched_plate) != str(license_plate):
-                            print(db.get_owner(license_plate))
+                            print(str(license_plate), '--', db.get_owner(license_plate))
 
                 cv2.rectangle(
                     img=display_image,

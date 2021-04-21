@@ -5,23 +5,46 @@ import os
 SRC_PATH = os.path.abspath(os.path.join(__file__, '..', '..', '..', 'src'))
 WORKSPACE_PATH = os.path.abspath(os.path.join(__file__, '..', '..', '..', 'workspace'))
 DATA_PATH = os.path.abspath(os.path.join(WORKSPACE_PATH, 'dataset'))
+RU_DATA_PATH = os.path.abspath(os.path.join(DATA_PATH, 'ru'))
+KZ_DATA_PATH = os.path.abspath(os.path.join(DATA_PATH, 'kz'))
 
-CARS_PATH = os.path.abspath(os.path.join(DATA_PATH, 'cars'))
-CARS_IMAGES_PATH = os.path.abspath(os.path.join(CARS_PATH, 'images'))
-CARS_ANNOTATIONS_PATH = os.path.abspath(os.path.join(CARS_PATH, 'annotations'))
+# region RU
 
-PLATES_PATH = os.path.abspath(os.path.join(DATA_PATH, 'plates'))
-PLATES_IMAGES_PATH = os.path.abspath(os.path.join(PLATES_PATH, 'images'))
-PLATES_ANNOTATIONS_PATH = os.path.abspath(os.path.join(PLATES_PATH, 'annotations'))
+RU_CARS_PATH = os.path.abspath(os.path.join(RU_DATA_PATH, 'cars'))
+RU_CARS_IMAGES_PATH = os.path.abspath(os.path.join(RU_CARS_PATH, 'images'))
+RU_CARS_ANNOTATIONS_PATH = os.path.abspath(os.path.join(RU_CARS_PATH, 'annotations'))
 
-CHARACTERS_PATH = os.path.abspath(os.path.join(PLATES_PATH, 'characters'))
-CHARACTERS_IMAGES_PATH = os.path.abspath(os.path.join(CHARACTERS_PATH, 'images'))
+RU_PLATES_PATH = os.path.abspath(os.path.join(RU_DATA_PATH, 'plates'))
+RU_PLATES_IMAGES_PATH = os.path.abspath(os.path.join(RU_PLATES_PATH, 'images'))
+RU_PLATES_ANNOTATIONS_PATH = os.path.abspath(os.path.join(RU_PLATES_PATH, 'annotations'))
+
+RU_CHARACTERS_PATH = os.path.abspath(os.path.join(RU_DATA_PATH, 'characters'))
+RU_CHARACTERS_IMAGES_PATH = os.path.abspath(os.path.join(RU_CHARACTERS_PATH, 'images'))
+
+# endregion RU
+
+# region KZ
+
+KZ_CARS_PATH = os.path.abspath(os.path.join(KZ_DATA_PATH, 'cars'))
+KZ_CARS_IMAGES_PATH = os.path.abspath(os.path.join(KZ_CARS_PATH, 'images'))
+KZ_CARS_ANNOTATIONS_PATH = os.path.abspath(os.path.join(KZ_CARS_PATH, 'annotations'))
+
+KZ_PLATES_PATH = os.path.abspath(os.path.join(KZ_DATA_PATH, 'plates'))
+KZ_PLATES_IMAGES_PATH = os.path.abspath(os.path.join(KZ_PLATES_PATH, 'images'))
+KZ_PLATES_ANNOTATIONS_PATH = os.path.abspath(os.path.join(KZ_PLATES_PATH, 'annotations'))
+
+KZ_CHARACTERS_PATH = os.path.abspath(os.path.join(KZ_DATA_PATH, 'characters'))
+KZ_CHARACTERS_IMAGES_PATH = os.path.abspath(os.path.join(KZ_CHARACTERS_PATH, 'images'))
+
+# endregion KZ
 
 # endregion Dataset
 
 # region Output
 
 OUTPUT_PATH = os.path.abspath(os.path.join(WORKSPACE_PATH, 'output'))
+RU_OUTPUT_PATH = os.path.abspath(os.path.join(OUTPUT_PATH, 'ru'))
+KZ_OUTPUT_PATH = os.path.abspath(os.path.join(OUTPUT_PATH, 'kz'))
 
 CARS_HISTORY_FILE = os.path.abspath(os.path.join(OUTPUT_PATH, 'cars_history.csv'))
 CARS_BEST_MODEL_FILE = os.path.abspath(os.path.join(OUTPUT_PATH, 'cars_model_best.h5'))
@@ -29,8 +52,19 @@ CARS_BEST_MODEL_FILE = os.path.abspath(os.path.join(OUTPUT_PATH, 'cars_model_bes
 PLATES_HISTORY_FILE = os.path.abspath(os.path.join(OUTPUT_PATH, 'plates_history.csv'))
 PLATES_BEST_MODEL_FILE = os.path.abspath(os.path.join(OUTPUT_PATH, 'plates_model_best.h5'))
 
-CHARACTERS_HISTORY_FILE = os.path.abspath(os.path.join(OUTPUT_PATH, 'characters_history.csv'))
-CHARACTERS_BEST_MODEL_FILE = os.path.abspath(os.path.join(OUTPUT_PATH, 'characters_model_best.h5'))
+# region RU
+
+RU_CHARACTERS_HISTORY_FILE = os.path.abspath(os.path.join(RU_OUTPUT_PATH, 'characters_history.csv'))
+RU_CHARACTERS_BEST_MODEL_FILE = os.path.abspath(os.path.join(RU_OUTPUT_PATH, 'characters_model_best.h5'))
+
+# endregion RU
+
+# region KZ
+
+KZ_CHARACTERS_HISTORY_FILE = os.path.abspath(os.path.join(KZ_OUTPUT_PATH, 'characters_history.csv'))
+KZ_CHARACTERS_BEST_MODEL_FILE = os.path.abspath(os.path.join(KZ_OUTPUT_PATH, 'characters_model_best.h5'))
+
+# endregion KZ
 
 # endregion Output
 
@@ -43,15 +77,36 @@ VALIDATION_SPLIT = 0.2
 
 # region Training
 
-CARS_TRAINING_SET_FILE = os.path.abspath(os.path.join(CARS_PATH, 'training_set.txt'))
-CARS_VALIDATION_SET_FILE = os.path.abspath(os.path.join(CARS_PATH, 'validation_set.txt'))
-CARS_LABELS_FILE = os.path.abspath(os.path.join(CARS_PATH, 'labels.txt'))
+CARS_TRAINING_SET_FILE = os.path.abspath(os.path.join(RU_CARS_PATH, 'training_set.txt'))
+CARS_VALIDATION_SET_FILE = os.path.abspath(os.path.join(RU_CARS_PATH, 'validation_set.txt'))
+CARS_LABELS_FILE = os.path.abspath(os.path.join(RU_CARS_PATH, 'labels.txt'))
 
-PLATES_TRAINING_SET_FILE = os.path.abspath(os.path.join(PLATES_PATH, 'training_set.txt'))
-PLATES_VALIDATION_SET_FILE = os.path.abspath(os.path.join(PLATES_PATH, 'validation_set.txt'))
-PLATES_LABELS_FILE = os.path.abspath(os.path.join(PLATES_PATH, 'labels.txt'))
+PLATES_TRAINING_SET_FILE = os.path.abspath(os.path.join(RU_PLATES_PATH, 'training_set.txt'))
+PLATES_VALIDATION_SET_FILE = os.path.abspath(os.path.join(RU_PLATES_PATH, 'validation_set.txt'))
 
-CHARACTERS_LABELS_FILE = os.path.abspath(os.path.join(CHARACTERS_PATH, 'labels.txt'))
+# region RU
+
+RU_PLATES_LABELS_FILE = os.path.abspath(os.path.join(RU_PLATES_PATH, 'labels.txt'))
+
+# region RU
+
+# region KZ
+
+KZ_PLATES_LABELS_FILE = os.path.abspath(os.path.join(KZ_PLATES_PATH, 'labels.txt'))
+
+# region KZ
+
+# region RU
+
+RU_CHARACTERS_LABELS_FILE = os.path.abspath(os.path.join(RU_CHARACTERS_PATH, 'labels.txt'))
+
+# endregion RU
+
+# region KZ
+
+KZ_CHARACTERS_LABELS_FILE = os.path.abspath(os.path.join(KZ_CHARACTERS_PATH, 'labels.txt'))
+
+# endregion KZ
 
 # endregion Training
 

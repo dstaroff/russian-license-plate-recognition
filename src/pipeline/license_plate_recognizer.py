@@ -5,22 +5,35 @@ import numpy as np
 
 from src import plate
 from src.local_utils.constants import (
-    CHARACTERS_IMAGES_PATH,
-    CHARACTERS_BEST_MODEL_FILE,
+    RU_CHARACTERS_IMAGES_PATH,
+    RU_CHARACTERS_BEST_MODEL_FILE,
+    KZ_CHARACTERS_IMAGES_PATH,
+    KZ_CHARACTERS_BEST_MODEL_FILE,
     CHARACTERS_SIZE,
 )
 from src.networks.character_classifier import CharacterClassifier
 from src.plate import (
     LicensePlate,
     LicensePlateError,
+    RuLicensePlate,
+    KzLicensePlate,
 )
 
 
 class LicensePlateRecognizer:
-    def __init__(self):
-        self.classnames = os.listdir(CHARACTERS_IMAGES_PATH)
+    MIN_RATIO = None
+    MAX_RATIO = None
+    MIN_HEIGHT = None
+    MAX_HEIGHT = None
+    MIN_CHARACTERS_COUNT = None
+    MAX_CHARACTERS_COUNT = None
+    WHITENING_WIDTH = 10
+
+    def __init__(self, characters_images_path, weights_file_path, license_plate_format: LicensePlate):
+        self.classnames = os.listdir(characters_images_path)
         self.model = CharacterClassifier(len(self.classnames))
-        self.model.load_weights(CHARACTERS_BEST_MODEL_FILE)
+        self.model.load_weights(weights_file_path)
+        self.license_plate_impl = license_plate_format
 
     def recognize_license_plate(self, image, plate_rect):
         plate_image = plate.get_clean(image[
@@ -30,6 +43,35 @@ class LicensePlateRecognizer:
                                       )
 
         plate_image = cv2.bitwise_not(plate_image)
+        _, plate_image = cv2.threshold(plate_image, 10, 255, cv2.THRESH_BINARY)
+        cv2.rectangle(
+            plate_image,
+            (0, 0),
+            (plate_image.shape[1] - 1, self.WHITENING_WIDTH),
+            (0, 0, 0),
+            cv2.FILLED
+        )
+        cv2.rectangle(
+            plate_image,
+            (0, 0),
+            (self.WHITENING_WIDTH, plate_image.shape[0] - 1),
+            (0, 0, 0),
+            cv2.FILLED
+        )
+        cv2.rectangle(
+            plate_image,
+            (plate_image.shape[1] - self.WHITENING_WIDTH - 1, 0),
+            (plate_image.shape[1] - 1, plate_image.shape[0] - 1),
+            (0, 0, 0),
+            cv2.FILLED
+        )
+        cv2.rectangle(
+            plate_image,
+            (0, plate_image.shape[0] - self.WHITENING_WIDTH - 1),
+            (plate_image.shape[1] - 1, plate_image.shape[0] - 1),
+            (0, 0, 0),
+            cv2.FILLED
+        )
 
         contours, _ = cv2.findContours(plate_image, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
@@ -39,16 +81,16 @@ class LicensePlateRecognizer:
             x, y, w, h = cv2.boundingRect(contour)
             ratio = h / w
 
-            if 1 <= ratio <= 3.5:
-                if 0.5 <= h / plate_image.shape[0] <= 0.9:
+            if self.MIN_RATIO <= ratio <= self.MAX_RATIO:
+                if self.MIN_HEIGHT <= h / plate_image.shape[0] <= self.MAX_HEIGHT:
                     curr_num = cv2.bitwise_not(plate_image[y:y + h, x:x + w].copy())
                     crop_characters.append(cv2.resize(curr_num, dsize=CHARACTERS_SIZE))
 
-        if 8 <= len(crop_characters) <= 9:
+        if self.MIN_CHARACTERS_COUNT <= len(crop_characters) <= self.MAX_CHARACTERS_COUNT:
             characters = [self.classnames[np.argmax(self.model.predict(self.image2data(img))[0])] for img in
                           crop_characters]
             try:
-                return LicensePlate.from_characters(characters)
+                return self.license_plate_impl.from_characters(characters)
             except LicensePlateError:
                 return None
         else:
@@ -70,3 +112,27 @@ class LicensePlateRecognizer:
         res = cv2.cvtColor(image, cv2.COLOR_GRAY2RGB)
 
         return np.array([res.astype('float32') / 255])
+
+
+class RuLicensePlateRecognizer(LicensePlateRecognizer):
+    MIN_RATIO = 0.8
+    MAX_RATIO = 2.5
+    MIN_HEIGHT = 0.3
+    MAX_HEIGHT = 0.9
+    MIN_CHARACTERS_COUNT = 8
+    MAX_CHARACTERS_COUNT = 9
+
+    def __init__(self):
+        super().__init__(RU_CHARACTERS_IMAGES_PATH, RU_CHARACTERS_BEST_MODEL_FILE, RuLicensePlate)
+
+
+class KzLicensePlateRecognizer(LicensePlateRecognizer):
+    MIN_RATIO = 0.9
+    MAX_RATIO = 2.5
+    MIN_HEIGHT = 0.35
+    MAX_HEIGHT = 0.8
+    MIN_CHARACTERS_COUNT = 7
+    MAX_CHARACTERS_COUNT = 8
+
+    def __init__(self):
+        super().__init__(KZ_CHARACTERS_IMAGES_PATH, KZ_CHARACTERS_BEST_MODEL_FILE, KzLicensePlate)
