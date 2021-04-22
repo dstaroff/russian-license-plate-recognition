@@ -136,5 +136,6 @@ PLATES_SIZE = (520, 112)
 # region Characters
 
 CHARACTERS_SIZE = (32, 32)
+WHITENING_WIDTH = 10
 
 # endregion Characters
